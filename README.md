@@ -38,6 +38,7 @@ An ASP.NET Core [minimal APIs](https://learn.microsoft.com/aspnet/core/fundament
 A Next.js frontend using the [App Router](https://nextjs.org/docs/app) and [React Server Components](https://react.dev/reference/rsc/server-components) that authenticates the user and displays data from the backend.
 
 **Uses:**
+* **[OpenTelemetry](https://nextjs.org/docs/app/building-your-application/optimizing/open-telemetry) - Adds observability to the Next.js server (modified to support GRPC endpoints when using the Node.js runtime)
 * **[NextAuth.js](https://next-auth.js.org/)** - Handles the auth flows
 * **[Material UI](https://mui.com/material-ui/)** - Provides [Material Design 2](https://m2.material.io/) based components for React
 
