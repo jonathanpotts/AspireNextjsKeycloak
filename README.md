@@ -12,7 +12,9 @@ This project requires the following:
 To run this project, do the following:
 1. In the `AspireNextjsKeycloak.Web` directory, run: `npm ci`
 2. Start Docker Desktop or Podman if it is not already running
-3. In the `AspireNextJsKeycloak.AppHost` directory, run: `dotnet run -lp https`
+3. Either:
+   * In the `AspireNextjsKeycloak.AppHost` directory, run: `dotnet run -lp https` and then open the dashboard using the URL output to the console
+   * Open `AspireNextjsKeycloak.sln` in Visual Studio and run the `AspireNextjsKeycloak.AppHost` project
 
 The default users are:
 | Username | Password |
