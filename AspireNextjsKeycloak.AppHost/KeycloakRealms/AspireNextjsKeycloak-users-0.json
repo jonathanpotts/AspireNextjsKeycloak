@@ -1,0 +1,50 @@
+{
+  "realm" : "AspireNextjsKeycloak",
+  "users" : [ {
+    "id" : "7b9841d1-3f55-46a2-b636-32ba4aedc928",
+    "username" : "alice",
+    "firstName" : "Alice",
+    "lastName" : "User",
+    "email" : "alice@example.com",
+    "emailVerified" : true,
+    "createdTimestamp" : 1738792504125,
+    "enabled" : true,
+    "totp" : false,
+    "credentials" : [ {
+      "id" : "8cd9ff1d-99b9-4583-a5b7-3405c2ad4303",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1738792514736,
+      "secretData" : "{\"value\":\"ohw6n1z2Y3rDjfRP3dLdHAVFCvs/I5fP1f/kv0C2IRE=\",\"salt\":\"ZK0T/fsCPhr+KmS0uGfGwg==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-aspirenextjskeycloak" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "616fc117-2cae-486e-b609-f34656f7c5fd",
+    "username" : "bob",
+    "firstName" : "Bob",
+    "lastName" : "User",
+    "email" : "bob@example.com",
+    "emailVerified" : true,
+    "createdTimestamp" : 1738781809037,
+    "enabled" : true,
+    "totp" : false,
+    "credentials" : [ {
+      "id" : "81bfde7d-649b-42e0-9c29-bcd04df70198",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1738781816306,
+      "secretData" : "{\"value\":\"JRdzK4Bbc7ijsdGzb8OPSk8MjB5bLTLpf4DT/iFlIkI=\",\"salt\":\"BmdWN1kXWano91QjcbBWkg==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":5,\"algorithm\":\"argon2\",\"additionalParameters\":{\"hashLength\":[\"32\"],\"memory\":[\"7168\"],\"type\":[\"id\"],\"version\":[\"1.3\"],\"parallelism\":[\"1\"]}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-aspirenextjskeycloak" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}

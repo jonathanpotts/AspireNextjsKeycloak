@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireNextjsKeycloak.AppHost", "AspireNextjsKeycloak.AppHost\AspireNextjsKeycloak.AppHost.csproj", "{A7A8AB87-FC46-4C4A-B0B6-9B78D2E0B12F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireNextjsKeycloak.ServiceDefaults", "AspireNextjsKeycloak.ServiceDefaults\AspireNextjsKeycloak.ServiceDefaults.csproj", "{24F5A960-4AB0-4CB4-BDB1-C3B354F9BD51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireNextjsKeycloak.ApiService", "AspireNextjsKeycloak.ApiService\AspireNextjsKeycloak.ApiService.csproj", "{4C833857-F811-49CC-8335-AD3FF3D9C902}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7A8AB87-FC46-4C4A-B0B6-9B78D2E0B12F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7A8AB87-FC46-4C4A-B0B6-9B78D2E0B12F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7A8AB87-FC46-4C4A-B0B6-9B78D2E0B12F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7A8AB87-FC46-4C4A-B0B6-9B78D2E0B12F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24F5A960-4AB0-4CB4-BDB1-C3B354F9BD51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24F5A960-4AB0-4CB4-BDB1-C3B354F9BD51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24F5A960-4AB0-4CB4-BDB1-C3B354F9BD51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24F5A960-4AB0-4CB4-BDB1-C3B354F9BD51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C833857-F811-49CC-8335-AD3FF3D9C902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C833857-F811-49CC-8335-AD3FF3D9C902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C833857-F811-49CC-8335-AD3FF3D9C902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C833857-F811-49CC-8335-AD3FF3D9C902}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

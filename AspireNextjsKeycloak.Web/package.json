@@ -1,0 +1,39 @@
+{
+  "name": "aspirenextjskeycloak-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.4.3",
+    "@mui/material-nextjs": "^6.4.3",
+    "@opentelemetry/api-logs": "~0.57",
+    "@opentelemetry/exporter-trace-otlp-grpc": "~0.57",
+    "@opentelemetry/instrumentation": "~0.57",
+    "@opentelemetry/sdk-logs": "~0.57",
+    "@vercel/otel": "~1.10",
+    "next": "~15.1",
+    "next-auth": "^4",
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "~15.1",
+    "eslint-config-prettier": "^10",
+    "prettier": "^3",
+    "prettier-plugin-organize-imports": "^4",
+    "typescript": "^5"
+  }
+}
