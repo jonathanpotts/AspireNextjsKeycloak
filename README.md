@@ -27,14 +27,14 @@ The default users are:
 An [Aspire app host](https://learn.microsoft.com/dotnet/aspire/fundamentals/app-host-overview) which handles orchestration and hosts the [Aspire dashboard](https://learn.microsoft.com/dotnet/aspire/fundamentals/dashboard/overview).
 
 **Uses:**
-* **[Aspire.Hosting.Keycloak](https://learn.microsoft.com/dotnet/aspire/authentication/keycloak-integration)** - Handles starting up the Keycloak container and importing the realm data
+* **[Aspire.Hosting.Keycloak](https://learn.microsoft.com/dotnet/aspire/authentication/keycloak-integration#hosting-integration)** - Handles starting up the Keycloak container and importing the realm data
 * **[Aspire.Hosting.NodeJs](https://learn.microsoft.com/dotnet/aspire/get-started/build-aspire-apps-with-nodejs)** - Handles launching and configuring the Node.js-based frontend project
 
 ### AspireNextjsKeycloak.ApiService
 An ASP.NET Core [minimal APIs](https://learn.microsoft.com/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-8.0) backend which requires authorization from Keycloak.
 
 **Uses:**
-* **[Aspire.Keycloak.Authentication](https://learn.microsoft.com/dotnet/aspire/authentication/keycloak-integration)** - Handles configuring authentication settings for Keycloak
+* **[Aspire.Keycloak.Authentication](https://learn.microsoft.com/dotnet/aspire/authentication/keycloak-integration#client-integration)** - Handles configuring authentication settings for Keycloak
 
 ### AspireNextjsKeycloak.Web
 A Next.js frontend using the [App Router](https://nextjs.org/docs/app) and [React Server Components](https://react.dev/reference/rsc/server-components) that authenticates the user and displays data from the backend.
