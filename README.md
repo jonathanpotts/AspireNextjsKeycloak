@@ -14,7 +14,7 @@ To run this project, do the following:
 2. Start Docker Desktop or Podman if it is not already running
 3. Either:
    * In the `AspireNextjsKeycloak.AppHost` directory, run: `dotnet run -lp https` and then open the dashboard using the URL output to the console
-   * Open `AspireNextjsKeycloak.sln` in Visual Studio and run the `AspireNextjsKeycloak.AppHost` project
+   * Open `AspireNextjsKeycloak.sln` in an IDE (e.g. Visual Studio, Rider) and run the `AspireNextjsKeycloak.AppHost` project
 
 The default users are:
 | Username | Password |
@@ -41,8 +41,8 @@ A Next.js frontend using the [App Router](https://nextjs.org/docs/app) and [Reac
 
 **Uses:**
 * **[OpenTelemetry](https://nextjs.org/docs/app/building-your-application/optimizing/open-telemetry)** - Adds observability to the Next.js server (modified to support GRPC endpoints when using the Node.js runtime)
-* **[NextAuth.js](https://next-auth.js.org/) (aka next-auth)** - Handles the auth flows
-* **[Material UI](https://mui.com/material-ui/) (aka MUI)** - Provides [Material Design 2](https://m2.material.io/) based components for React
+* **[NextAuth.js](https://next-auth.js.org/) (a.k.a. next-auth)** - Handles the auth flows
+* **[Material UI](https://mui.com/material-ui/) (a.k.a. MUI)** - Provides [Material Design 2](https://m2.material.io/) based components for React
 
 ## Notice
 Please do not use the realm data from this repository in production as the secrets are exposed to the public.
