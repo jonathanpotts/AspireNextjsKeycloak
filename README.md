@@ -41,8 +41,8 @@ A Next.js frontend using the [App Router](https://nextjs.org/docs/app) and [Reac
 
 **Uses:**
 * **[OpenTelemetry](https://nextjs.org/docs/app/building-your-application/optimizing/open-telemetry)** - Adds observability to the Next.js server (modified to support GRPC endpoints when using the Node.js runtime)
-* **[NextAuth.js](https://next-auth.js.org/)** - Handles the auth flows
-* **[Material UI](https://mui.com/material-ui/)** - Provides [Material Design 2](https://m2.material.io/) based components for React
+* **[NextAuth.js](https://next-auth.js.org/) (aka next-auth)** - Handles the auth flows
+* **[Material UI](https://mui.com/material-ui/) (aka MUI)** - Provides [Material Design 2](https://m2.material.io/) based components for React
 
 ## Notice
 Please do not use the realm data from this repository in production as the secrets are exposed to the public.
