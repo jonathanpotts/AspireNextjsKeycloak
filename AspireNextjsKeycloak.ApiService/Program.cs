@@ -8,18 +8,26 @@ builder.AddServiceDefaults();
 // Add services to the container.
 builder.Services.AddProblemDetails();
 
-var keycloakRealm = builder.Configuration["Keycloak:Realm"] ?? throw new Exception("Keycloak:Realm was not provided.");
+var keycloakRealm =
+    builder.Configuration["Keycloak:Realm"]
+    ?? throw new Exception("Keycloak:Realm was not provided.");
 
-builder.Services.AddAuthentication().AddKeycloakJwtBearer("keycloak", keycloakRealm, options =>
-{
-    if (builder.Environment.IsDevelopment())
-    {
-        options.RequireHttpsMetadata = false;
-    }
-    
-    options.Audience = builder.Configuration["Keycloak:ClientId"];
-    options.TokenValidationParameters.NameClaimType = JwtRegisteredClaimNames.Name;
-});
+builder
+    .Services.AddAuthentication()
+    .AddKeycloakJwtBearer(
+        "keycloak",
+        keycloakRealm,
+        options =>
+        {
+            if (builder.Environment.IsDevelopment())
+            {
+                options.RequireHttpsMetadata = false;
+            }
+
+            options.Audience = builder.Configuration["Keycloak:ClientId"];
+            options.TokenValidationParameters.NameClaimType = JwtRegisteredClaimNames.Name;
+        }
+    );
 
 builder.Services.AddAuthorizationBuilder();
 
@@ -31,22 +39,37 @@ app.UseExceptionHandler();
 app.UseAuthentication();
 app.UseAuthorization();
 
-string[] summaries = ["Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"];
+string[] summaries =
+[
+    "Freezing",
+    "Bracing",
+    "Chilly",
+    "Cool",
+    "Mild",
+    "Warm",
+    "Balmy",
+    "Hot",
+    "Sweltering",
+    "Scorching",
+];
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast")
-.RequireAuthorization();
+app.MapGet(
+        "/weatherforecast",
+        () =>
+        {
+            var forecast = Enumerable
+                .Range(1, 5)
+                .Select(index => new WeatherForecast(
+                    DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+                    Random.Shared.Next(-20, 55),
+                    summaries[Random.Shared.Next(summaries.Length)]
+                ))
+                .ToArray();
+            return forecast;
+        }
+    )
+    .WithName("GetWeatherForecast")
+    .RequireAuthorization();
 
 app.MapDefaultEndpoints();
 
