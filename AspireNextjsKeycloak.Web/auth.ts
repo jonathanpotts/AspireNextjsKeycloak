@@ -22,7 +22,7 @@ export const config: NextAuthOptions = {
       authorization: {
         params: {
           scope:
-            `openid email profile offline_access ${process.env.KEYCLOAK_SCOPE}`.trim(),
+            `openid email profile offline_access ${process.env.KEYCLOAK_SCOPE ?? ""}`.trim(),
         },
       },
     }),
