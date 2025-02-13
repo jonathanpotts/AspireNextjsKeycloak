@@ -13,7 +13,8 @@ var apiService = builder
     .AddProject<Projects.AspireNextjsKeycloak_ApiService>("apiservice")
     .WithEnvironment("KEYCLOAK__REALM", keycloakRealm)
     .WithEnvironment("KEYCLOAK__CLIENTID", "apiservice")
-    .WithReference(keycloak);
+    .WithReference(keycloak)
+    .WaitFor(keycloak);
 
 // Workaround for https://github.com/dotnet/aspire/issues/7417
 // TODO: Update when fix comes out with Aspire 9.1
@@ -38,6 +39,7 @@ var webFrontend = builder
     .WithEnvironment("KEYCLOAK_SCOPE", "apiservice")
     .WithReference(keycloak)
     .WithReference(apiService)
+    .WaitFor(keycloak)
     .WaitFor(apiService)
     .PublishAsDockerFile();
 
