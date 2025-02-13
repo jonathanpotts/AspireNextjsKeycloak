@@ -14,10 +14,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^6.4.4",
     "@mui/material-nextjs": "^6.4.3",
-    "@opentelemetry/api-logs": "^0.57.1",
-    "@opentelemetry/exporter-trace-otlp-grpc": "^0.57.1",
-    "@opentelemetry/instrumentation": "^0.57.1",
-    "@opentelemetry/sdk-logs": "^0.57.1",
+    "@opentelemetry/exporter-trace-otlp-grpc": "^0.57.2",
     "@vercel/otel": "^1.10.1",
     "next": "^15.1.7",
     "next-auth": "^4.24.11",
@@ -32,7 +29,7 @@
     "eslint": "^9.20.1",
     "eslint-config-next": "^15.1.7",
     "eslint-config-prettier": "^10.0.1",
-    "prettier": "^3.5.0",
+    "prettier": "^3.5.1",
     "prettier-plugin-organize-imports": "^4.1.0",
     "typescript": "^5.7.3"
   }
