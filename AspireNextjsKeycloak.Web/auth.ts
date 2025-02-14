@@ -35,7 +35,7 @@ export const config: NextAuthOptions = {
           accessToken: account.access_token,
           expiresAt: account.expires_at,
           refreshToken: account.refresh_token,
-          idToken: account.id_token,
+          idToken: account.refresh_token ? account.id_token : undefined,
         };
       }
 
@@ -104,7 +104,16 @@ export const config: NextAuthOptions = {
   },
   events: {
     async signOut({ token }) {
-      if (token.idToken) {
+      if (token.refreshToken) {
+        await fetch(`${keycloakIssuer}/protocol/openid-connect/logout`, {
+          method: "post",
+          body: new URLSearchParams({
+            client_id: process.env.KEYCLOAK_ID!,
+            client_secret: process.env.KEYCLOAK_SECRET!,
+            refresh_token: token.refreshToken,
+          }),
+        });
+      } else if (token.idToken) {
         const logOutUrl = new URL(
           `${keycloakIssuer}/protocol/openid-connect/logout`,
         );
