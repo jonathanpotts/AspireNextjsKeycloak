@@ -35,7 +35,7 @@ export const config: NextAuthOptions = {
           accessToken: account.access_token,
           expiresAt: account.expires_at,
           refreshToken: account.refresh_token,
-          idToken: account.refresh_token ? account.id_token : undefined,
+          idToken: account.refresh_token ? undefined : account.id_token,
         };
       }
 
@@ -48,7 +48,12 @@ export const config: NextAuthOptions = {
       }
 
       if (!token.refreshToken) {
-        throw new TypeError("Missing refreshToken");
+        console.error("Missing refreshToken");
+
+        return {
+          ...token,
+          error: "RefreshTokenError",
+        };
       }
 
       try {
