@@ -5,9 +5,7 @@ import AuthSessionProvider from "./_components/auth/auth-session-provider";
 import MuiProvider from "./_components/mui/mui-provider";
 
 const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
-  display: "swap",
   variable: "--font-roboto",
 });
 export const metadata: Metadata = {
