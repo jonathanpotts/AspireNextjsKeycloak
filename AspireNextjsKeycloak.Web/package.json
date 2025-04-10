@@ -14,8 +14,8 @@
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^7.0.2",
     "@mui/material-nextjs": "^7.0.2",
-    "@opentelemetry/exporter-trace-otlp-grpc": "^0.57.2",
-    "@vercel/otel": "^1.10.1",
+    "@opentelemetry/exporter-trace-otlp-grpc": "^0.46.0",
+    "@vercel/otel": "^1.10.4",
     "next": "^15.3.0",
     "next-auth": "^4.24.11",
     "react": "^19.1.0",
@@ -32,5 +32,10 @@
     "prettier": "^3.5.3",
     "prettier-plugin-organize-imports": "^4.1.0",
     "typescript": "^5.8.3"
+  },
+  "overrides": {
+    "@opentelemetry/exporter-trace-otlp-grpc": {
+      "@grpc/grpc-js": "~1.12.6"
+    }
   }
 }
