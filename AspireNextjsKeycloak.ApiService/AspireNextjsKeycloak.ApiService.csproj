@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspire.Keycloak.Authentication" Version="9.1.0-preview.1.25121.10" />
+    <PackageReference Include="Aspire.Keycloak.Authentication" Version="9.2.0-preview.1.25209.2" />
   </ItemGroup>
 
   <ItemGroup>
