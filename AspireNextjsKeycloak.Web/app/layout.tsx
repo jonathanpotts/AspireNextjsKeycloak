@@ -1,6 +1,6 @@
-import { auth } from "@/auth";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import { auth } from "@/auth";
 import AuthSessionProvider from "./_components/auth/auth-session-provider";
 import MuiProvider from "./_components/mui/mui-provider";
 

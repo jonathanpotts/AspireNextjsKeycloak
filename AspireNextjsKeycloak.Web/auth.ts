@@ -1,4 +1,3 @@
-import { getKeycloakIssuer } from "@/service-discovery";
 import type {
   GetServerSidePropsContext,
   NextApiRequest,
@@ -7,6 +6,7 @@ import type {
 import type { NextAuthOptions } from "next-auth";
 import { getServerSession } from "next-auth";
 import KeycloakProvider from "next-auth/providers/keycloak";
+import { getKeycloakIssuer } from "@/service-discovery";
 
 const keycloakIssuer = getKeycloakIssuer(
   "keycloak",

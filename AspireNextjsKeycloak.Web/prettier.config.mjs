@@ -1,6 +1,7 @@
-/** @type {import("prettier").Config} */
+/** @type {import("prettier").Config & import("@trivago/prettier-plugin-sort-imports").PluginConfig} */
 const prettierConfig = {
-  plugins: ["prettier-plugin-organize-imports"],
+  plugins: ["@trivago/prettier-plugin-sort-imports"],
+  importOrder: ["<THIRD_PARTY_MODULES>", "^@/(.*)$", "^[./]"],
 };
 
 export default prettierConfig;

@@ -1,5 +1,3 @@
-import { auth } from "@/auth";
-import { getServiceEndpoint } from "@/service-discovery";
 import {
   Box,
   Container,
@@ -12,6 +10,8 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
+import { auth } from "@/auth";
+import { getServiceEndpoint } from "@/service-discovery";
 import SignInButton from "./_components/sign-in-button";
 import SignOutButton from "./_components/sign-out-button";
 
