@@ -38,13 +38,10 @@ var webFrontend = builder
     .WaitFor(apiService)
     .PublishAsDockerFile();
 
-var launchProfile =
-    builder.Configuration["DOTNET_LAUNCH_PROFILE"]
-    ?? builder.Configuration["AppHost:DefaultLaunchProfileName"]; // work around https://github.com/dotnet/aspire/issues/5093
+var launchProfile = builder.Configuration["DOTNET_LAUNCH_PROFILE"];
 if (builder.Environment.IsDevelopment() && launchProfile == "https")
 {
-    // Disable TLS certificate validation in development, see https://github.com/dotnet/aspire/issues/3324 for more details.
-    webFrontend.WithEnvironment("NODE_TLS_REJECT_UNAUTHORIZED", "0");
+    webFrontend.RunWithHttpsDevCertificate("HTTPS_CERT_FILE", "HTTPS_CERT_KEY_FILE");
 }
 
 builder.Build().Run();
