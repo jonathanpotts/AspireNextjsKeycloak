@@ -29,7 +29,7 @@ export default async function Home() {
   let data: WeatherForecast[] | undefined;
 
   if (session) {
-    const accessToken = session?.accessToken;
+    const accessToken = session.accessToken;
 
     const res = await fetch(
       `${getServiceEndpoint("apiservice")}/weatherforecast`,
