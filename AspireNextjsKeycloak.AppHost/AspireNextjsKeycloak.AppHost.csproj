@@ -1,7 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <Sdk Name="Aspire.AppHost.Sdk" Version="9.2.0" />
-
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
@@ -10,15 +8,12 @@
     <IsAspireHost>true</IsAspireHost>
     <UserSecretsId>d341f139-def8-4f87-b1a2-cad171a9e1fa</UserSecretsId>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\AspireNextjsKeycloak.ApiService\AspireNextjsKeycloak.ApiService.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting.AppHost" Version="9.2.0" />
     <PackageReference Include="Aspire.Hosting.Keycloak" Version="9.2.0-preview.1.25209.2" />
     <PackageReference Include="Aspire.Hosting.NodeJs" Version="9.2.0" />
   </ItemGroup>
-
 </Project>

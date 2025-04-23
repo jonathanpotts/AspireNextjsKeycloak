@@ -1,17 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Aspire.Keycloak.Authentication" Version="9.2.0-preview.1.25209.2" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\AspireNextjsKeycloak.ServiceDefaults\AspireNextjsKeycloak.ServiceDefaults.csproj" />
   </ItemGroup>
-
 </Project>
