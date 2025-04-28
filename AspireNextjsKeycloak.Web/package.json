@@ -24,7 +24,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
-    "@types/node": "^22.14.1",
+    "@types/node": "^22.15.3",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "eslint": "^9.25.1",
@@ -32,10 +32,5 @@
     "eslint-config-prettier": "^10.1.2",
     "prettier": "^3.5.3",
     "typescript": "^5.8.3"
-  },
-  "overrides": {
-    "@opentelemetry/exporter-trace-otlp-grpc": {
-      "@grpc/grpc-js": "~1.12.6"
-    }
   }
 }
