@@ -10,9 +10,8 @@ This project requires the following:
 
 ## Running
 To run this project, do the following:
-1. In the `AspireNextjsKeycloak.Web` directory, run: `npm install`
-2. Start Docker Desktop or Podman if it is not already running
-3. Either:
+1. Start Docker Desktop or Podman if it is not already running
+2. Either:
    * In the `AspireNextjsKeycloak.AppHost` directory, run: `dotnet run -lp https` and then open the dashboard using the URL output to the console
    * Open `AspireNextjsKeycloak.sln` in an IDE (e.g. Visual Studio, Rider) and run the `AspireNextjsKeycloak.AppHost` project
 
