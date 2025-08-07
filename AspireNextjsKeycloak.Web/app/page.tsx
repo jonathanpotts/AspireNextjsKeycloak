@@ -1,4 +1,5 @@
 import {
+  Alert,
   Box,
   Container,
   Paper,
@@ -12,8 +13,8 @@ import {
 } from "@mui/material";
 import { auth } from "@/auth";
 import { getServiceEndpoint } from "@/service-discovery";
-import SignInButton from "./_components/sign-in-button";
-import SignOutButton from "./_components/sign-out-button";
+import SignInButton from "./components/SignInButton";
+import SignOutButton from "./components/SignOutButton";
 
 type WeatherForecast = {
   date: string;
@@ -49,21 +50,21 @@ export default async function Home() {
 
   return (
     <Container sx={{ py: 3 }}>
-      <Typography component="h1" variant="h4" sx={{ mb: 2 }}>
+      <Typography component="h1" variant="h4" gutterBottom>
         Weather
       </Typography>
       {session ? (
         <>
           <Box sx={{ mb: 2 }}>
-            Hello, <strong>{session.user?.name}</strong>!
-            <div>
-              <SignOutButton />
-            </div>
+            <Typography variant="body1" gutterBottom>
+              Hello, {session.user?.name}!
+            </Typography>
+            <SignOutButton />
           </Box>
           {error && (
-            <Typography color="error">
-              <strong>Error: </strong> {error}
-            </Typography>
+            <Box sx={{ mb: 2 }}>
+              <Alert severity="error">{error}</Alert>
+            </Box>
           )}
           {data && (
             <TableContainer component={Paper}>
@@ -99,10 +100,10 @@ export default async function Home() {
         </>
       ) : (
         <>
-          Please sign in to view data.
-          <div>
-            <SignInButton />
-          </div>
+          <Typography variant="body1" gutterBottom>
+            Please sign in to view data.
+          </Typography>
+          <SignInButton />
         </>
       )}
     </Container>
