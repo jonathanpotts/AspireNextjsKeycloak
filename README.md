@@ -5,7 +5,7 @@ Example project using [.NET Aspire](https://dotnet.microsoft.com/apps/cloud) wit
 This project requires the following:
 * [.NET](https://dotnet.microsoft.com/) SDK 8.0 or later
   * ASP.NET Core Runtime 8.0
-* [Node.js](https://nodejs.org/) 18.18 or later
+* [Node.js](https://nodejs.org/) 20 or later
 * [Docker Desktop](https://www.docker.com/) or [Podman](https://podman.io/)
 
 ## Running
