@@ -1,5 +1,5 @@
 # AspireNextjsKeycloak
-Example project using [.NET Aspire](https://dotnet.microsoft.com/apps/cloud) with a [Next.js](https://nextjs.org/) ([React](https://react.dev/)) frontend, an [ASP.NET Core](https://dotnet.microsoft.com/apps/aspnet/apis) backend, and [Keycloak](https://www.keycloak.org/) for authentication.
+Example project using [Aspire](https://aspire.dev/) with a [Next.js](https://nextjs.org/) ([React](https://react.dev/)) frontend, an [ASP.NET Core](https://dotnet.microsoft.com/apps/aspnet/apis) backend, and [Keycloak](https://www.keycloak.org/) for authentication.
 
 ## Requirements
 This project requires the following:
