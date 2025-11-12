@@ -8,6 +8,9 @@ builder.AddServiceDefaults();
 // Add services to the container.
 builder.Services.AddProblemDetails();
 
+// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddOpenApi();
+
 var keycloakRealm =
     builder.Configuration["Keycloak:Realm"]
     ?? throw new Exception("Keycloak:Realm was not provided.");
@@ -52,6 +55,8 @@ string[] summaries =
     "Sweltering",
     "Scorching",
 ];
+
+app.MapGet("/", () => "API service is running. Navigate to /weatherforecast to see sample data.");
 
 app.MapGet(
         "/weatherforecast",

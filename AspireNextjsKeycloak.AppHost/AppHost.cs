@@ -1,5 +1,3 @@
-using Microsoft.Extensions.Hosting;
-
 var builder = DistributedApplication.CreateBuilder(args);
 
 var keycloak = builder
@@ -7,7 +5,7 @@ var keycloak = builder
     .WithDataVolume()
     .WithRealmImport("./KeycloakRealms");
 
-const string keycloakRealm = "AspireNextjsKeycloak";
+var keycloakRealm = builder.AddParameter("keycloak-realm", "AspireNextjsKeycloak");
 
 var apiService = builder
     .AddProject<Projects.AspireNextjsKeycloak_ApiService>("apiservice")
@@ -23,26 +21,32 @@ var nextauthSecret = builder.AddParameter(
     secret: true,
     persist: true
 );
+var nextauthUrl = builder.AddParameter(
+    "nextauth-url",
+    "http://webfrontend-aspirenextjskeycloak.dev.localhost:3000"
+);
+var keycloakId = builder.AddParameter("keycloak-id", "webfrontend");
+var keycloakSecret = builder.AddParameter(
+    "keycloak-secret",
+    "O94wFQrYPY4Eg2AZvMUQFR71203FwC1r",
+    secret: true
+);
+var keycloakScope = builder.AddParameter("keycloak-scope", "apiservice");
 
 var webFrontend = builder
-    .AddNpmApp("webfrontend", "../AspireNextjsKeycloak.Web", "dev")
+    .AddJavaScriptApp("webfrontend", "../AspireNextjsKeycloak.Web")
     .WithHttpEndpoint(3000, env: "PORT")
     .WithExternalHttpEndpoints()
     .WithEnvironment("NEXTAUTH_SECRET", nextauthSecret)
+    .WithEnvironment("NEXTAUTH_URL", nextauthUrl)
     .WithEnvironment("KEYCLOAK_REALM", keycloakRealm)
-    .WithEnvironment("KEYCLOAK_ID", "webfrontend")
-    .WithEnvironment("KEYCLOAK_SECRET", "O94wFQrYPY4Eg2AZvMUQFR71203FwC1r")
-    .WithEnvironment("KEYCLOAK_SCOPE", "apiservice")
+    .WithEnvironment("KEYCLOAK_ID", keycloakId)
+    .WithEnvironment("KEYCLOAK_SECRET", keycloakSecret)
+    .WithEnvironment("KEYCLOAK_SCOPE", keycloakScope)
     .WithReference(keycloak)
     .WaitFor(keycloak)
     .WithReference(apiService)
     .WaitFor(apiService)
     .PublishAsDockerFile();
-
-var launchProfile = builder.Configuration["DOTNET_LAUNCH_PROFILE"];
-if (builder.Environment.IsDevelopment() && launchProfile == "https")
-{
-    webFrontend.RunWithHttpsDevCertificate("HTTPS_CERT_FILE", "HTTPS_CERT_KEY_FILE");
-}
 
 builder.Build().Run();

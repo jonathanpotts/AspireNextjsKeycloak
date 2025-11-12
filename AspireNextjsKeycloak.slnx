@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="AspireNextjsKeycloak.ApiService/AspireNextjsKeycloak.ApiService.csproj" />
+  <Project Path="AspireNextjsKeycloak.AppHost/AspireNextjsKeycloak.AppHost.csproj" />
+  <Project Path="AspireNextjsKeycloak.ServiceDefaults/AspireNextjsKeycloak.ServiceDefaults.csproj" />
+</Solution>

@@ -3,17 +3,14 @@ Example project using [Aspire](https://aspire.dev/) with a [Next.js](https://nex
 
 ## Requirements
 This project requires the following:
-* [.NET](https://dotnet.microsoft.com/) SDK 8.0 or later
-  * ASP.NET Core Runtime 8.0
+* [.NET](https://dotnet.microsoft.com/) SDK 10.0 or later
 * [Node.js](https://nodejs.org/) 20 or later
 * [Docker Desktop](https://www.docker.com/) or [Podman](https://podman.io/)
 
 ## Running
 To run this project, do the following:
 1. Start Docker Desktop or Podman if it is not already running
-2. Either:
-   * In the `AspireNextjsKeycloak.AppHost` directory, run: `dotnet run -lp https` and then open the dashboard using the URL output to the console
-   * Open `AspireNextjsKeycloak.sln` in an IDE (e.g. Visual Studio, Rider) and run the `AspireNextjsKeycloak.AppHost` project using the `https` launch profile
+2. Run `dotnet aspire run` and then open the dashboard using the URL output to the console
 
 The default users are:
 | Username | Password |
@@ -23,23 +20,23 @@ The default users are:
 
 ## Projects
 ### AspireNextjsKeycloak.AppHost
-An [Aspire app host](https://learn.microsoft.com/dotnet/aspire/fundamentals/app-host-overview) which handles orchestration and hosts the [Aspire dashboard](https://learn.microsoft.com/dotnet/aspire/fundamentals/dashboard/overview).
+An [Aspire app host](https://aspire.dev/get-started/app-host/) which handles orchestration and hosts the [Aspire dashboard](https://aspire.dev/dashboard/overview/).
 
 **Uses:**
-* **[Aspire.Hosting.Keycloak](https://learn.microsoft.com/dotnet/aspire/authentication/keycloak-integration#hosting-integration)** - Handles starting up the Keycloak container and importing the realm data
-* **[Aspire.Hosting.NodeJs](https://learn.microsoft.com/dotnet/aspire/get-started/build-aspire-apps-with-nodejs)** - Handles launching and configuring the Node.js-based frontend project
+* **[Aspire.Hosting.Keycloak](https://aspire.dev/integrations/security/keycloak/)** - Handles starting up the Keycloak container and importing the realm data
+* **[Aspire.Hosting.JavaScript](https://aspire.dev/whats-new/aspire-13/#javascript-as-a-first-class-citizen)** - Handles launching and configuring the Node.js-based frontend project
 
 ### AspireNextjsKeycloak.ApiService
-An ASP.NET Core [minimal APIs](https://learn.microsoft.com/aspnet/core/fundamentals/minimal-apis/overview?view=aspnetcore-8.0) backend which requires authorization from Keycloak.
+An ASP.NET Core [minimal APIs](https://learn.microsoft.com/aspnet/core/fundamentals/apis?view=aspnetcore-10.0) backend which requires authorization from Keycloak.
 
 **Uses:**
-* **[Aspire.Keycloak.Authentication](https://learn.microsoft.com/dotnet/aspire/authentication/keycloak-integration#client-integration)** - Handles configuring authentication settings for Keycloak
+* **[Aspire.Keycloak.Authentication](https://aspire.dev/integrations/security/keycloak/)** - Handles configuring authentication settings for Keycloak
 
 ### AspireNextjsKeycloak.Web
 A Next.js frontend using the [App Router](https://nextjs.org/docs/app) and [React Server Components](https://react.dev/reference/rsc/server-components) that authenticates the user and displays data from the backend.
 
 **Uses:**
-* **[OpenTelemetry](https://nextjs.org/docs/app/building-your-application/optimizing/open-telemetry)** - Adds observability to the Next.js server (modified to support gRPC endpoints when using the Node.js runtime)
+* **[OpenTelemetry](https://nextjs.org/docs/app/guides/open-telemetry)** - Adds observability to the Next.js server (modified to support gRPC endpoints when using the Node.js runtime)
 * **[NextAuth.js](https://next-auth.js.org/) (a.k.a. next-auth)** - Handles the auth flows
 * **[Material UI](https://mui.com/material-ui/) (a.k.a. MUI)** - Provides [Material Design 2](https://m2.material.io/)-based components for React
 

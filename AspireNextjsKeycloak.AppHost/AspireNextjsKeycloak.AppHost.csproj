@@ -1,8 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Sdk Name="Aspire.AppHost.Sdk" Version="9.4.0" />
+﻿<Project Sdk="Aspire.AppHost.Sdk/13.0.0">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UserSecretsId>d341f139-def8-4f87-b1a2-cad171a9e1fa</UserSecretsId>
@@ -11,24 +10,7 @@
     <ProjectReference Include="..\AspireNextjsKeycloak.ApiService\AspireNextjsKeycloak.ApiService.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Aspire.Hosting.AppHost" Version="9.4.0" />
-    <PackageReference Include="Aspire.Hosting.Keycloak" Version="9.4.0-preview.1.25378.8" />
-    <PackageReference Include="Aspire.Hosting.NodeJs" Version="9.4.0" />
+    <PackageReference Include="Aspire.Hosting.Keycloak" Version="13.0.0-preview.1.25560.3" />
+    <PackageReference Include="Aspire.Hosting.JavaScript" Version="13.0.0" />
   </ItemGroup>
-  <Target Name="RestoreNpm" BeforeTargets="Build" Condition=" '$(DesignTimeBuild)' != 'true' ">
-    <ItemGroup>
-      <PackageJsons Include="..\*\package.json" />
-    </ItemGroup>
-    <!-- Install npm packages if node_modules is missing -->
-    <Message
-      Importance="Normal"
-      Text="Installing npm packages for %(PackageJsons.RelativeDir)"
-      Condition="!Exists('%(PackageJsons.RootDir)%(PackageJsons.Directory)/node_modules')"
-    />
-    <Exec
-      Command="npm install"
-      WorkingDirectory="%(PackageJsons.RootDir)%(PackageJsons.Directory)"
-      Condition="!Exists('%(PackageJsons.RootDir)%(PackageJsons.Directory)/node_modules')"
-    />
-  </Target>
 </Project>

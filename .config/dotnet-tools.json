@@ -3,9 +3,16 @@
   "isRoot": true,
   "tools": {
     "csharpier": {
-      "version": "1.1.1",
+      "version": "1.2.1",
       "commands": [
         "csharpier"
+      ],
+      "rollForward": false
+    },
+    "aspire.cli": {
+      "version": "13.0.0",
+      "commands": [
+        "aspire"
       ],
       "rollForward": false
     }
