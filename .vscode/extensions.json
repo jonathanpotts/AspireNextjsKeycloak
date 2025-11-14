@@ -2,11 +2,8 @@
   "recommendations": [
     "editorconfig.editorconfig",
     "ms-dotnettools.csdevkit",
-    "ms-dotnettools.vscodeintellicode-csharp",
     "csharpier.csharpier-vscode",
     "dbaeumer.vscode-eslint",
-    "VisualStudioExptTeam.vscodeintellicode",
-    "VisualStudioExptTeam.vscodeintellicode-completions",
     "esbenp.prettier-vscode",
     "ms-azuretools.vscode-containers"
   ]
