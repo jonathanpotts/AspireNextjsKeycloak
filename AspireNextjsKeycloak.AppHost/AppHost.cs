@@ -49,4 +49,9 @@ var webFrontend = builder
     .WaitFor(apiService)
     .PublishAsDockerFile();
 
+if (builder.ExecutionContext.IsRunMode)
+{
+    webFrontend.WithEnvironment("NEXTAUTH_URL_INTERNAL", webFrontend.GetEndpoint("http"));
+}
+
 builder.Build().Run();
