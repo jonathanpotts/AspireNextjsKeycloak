@@ -10,7 +10,7 @@ This project requires the following:
 ## Running
 To run this project, do the following:
 1. Start Docker Desktop or Podman if it is not already running
-2. Run `dotnet tool restore` followed by `dotnet aspire run` and then open the dashboard using the URL output to the console
+2. In the repo directory, run `dotnet tool restore` followed by `dotnet aspire run` and then open the dashboard using the URL output to the console
 
 The default users are:
 | Username | Password |
