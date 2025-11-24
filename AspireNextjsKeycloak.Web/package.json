@@ -16,8 +16,8 @@
     "@mui/material-nextjs": "^7",
     "@opentelemetry/exporter-trace-otlp-grpc": "^0.205.0",
     "@vercel/otel": "^2",
+    "better-auth": "^1",
     "next": "~16",
-    "next-auth": "^4",
     "react": "~19.2",
     "react-dom": "~19.2"
   },

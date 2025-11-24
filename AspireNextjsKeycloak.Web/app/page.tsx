@@ -11,6 +11,7 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
+import { headers } from "next/headers";
 import { auth } from "@/auth";
 import { getServiceEndpoint } from "@/service-discovery";
 import SignInButton from "./components/SignInButton";
@@ -24,13 +25,16 @@ type WeatherForecast = {
 };
 
 export default async function Home() {
-  const session = await auth();
+  const session = await auth.api.getSession({ headers: await headers() });
 
   let error: string | undefined;
   let data: WeatherForecast[] | undefined;
 
   if (session) {
-    const accessToken = session.accessToken;
+    const { accessToken } = await auth.api.getAccessToken({
+      body: { providerId: "keycloak" },
+      headers: await headers(),
+    });
 
     const res = await fetch(
       `${getServiceEndpoint("apiservice")}/weatherforecast`,

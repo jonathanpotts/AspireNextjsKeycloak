@@ -648,7 +648,7 @@
     "alwaysDisplayInConsole" : false,
     "clientAuthenticatorType" : "client-secret",
     "secret" : "O94wFQrYPY4Eg2AZvMUQFR71203FwC1r",
-    "redirectUris" : [ "http://webfrontend-aspirenextjskeycloak.dev.localhost:3000/api/auth/callback/keycloak" ],
+    "redirectUris" : [ "http://webfrontend-aspirenextjskeycloak.dev.localhost:3000/api/auth/oauth2/callback/keycloak" ],
     "webOrigins" : [ "http://webfrontend-aspirenextjskeycloak.dev.localhost:3000" ],
     "notBefore" : 0,
     "bearerOnly" : false,

@@ -15,14 +15,14 @@ var apiService = builder
     .WithReference(keycloak)
     .WaitFor(keycloak);
 
-var nextauthSecret = builder.AddParameter(
-    "nextauth-secret",
+var betterAuthSecret = builder.AddParameter(
+    "better-auth-secret",
     new GenerateParameterDefault { MinLength = 32, Special = false },
     secret: true,
     persist: true
 );
-var nextauthUrl = builder.AddParameter(
-    "nextauth-url",
+var betterAuthUrl = builder.AddParameter(
+    "better-auth-url",
     "http://webfrontend-aspirenextjskeycloak.dev.localhost:3000"
 );
 var keycloakId = builder.AddParameter("keycloak-id", "webfrontend");
@@ -37,8 +37,8 @@ var webFrontend = builder
     .AddJavaScriptApp("webfrontend", "../AspireNextjsKeycloak.Web")
     .WithHttpEndpoint(3000, env: "PORT")
     .WithExternalHttpEndpoints()
-    .WithEnvironment("NEXTAUTH_SECRET", nextauthSecret)
-    .WithEnvironment("NEXTAUTH_URL", nextauthUrl)
+    .WithEnvironment("BETTER_AUTH_SECRET", betterAuthSecret)
+    .WithEnvironment("BETTER_AUTH_URL", betterAuthUrl)
     .WithEnvironment("KEYCLOAK_REALM", keycloakRealm)
     .WithEnvironment("KEYCLOAK_ID", keycloakId)
     .WithEnvironment("KEYCLOAK_SECRET", keycloakSecret)
