@@ -3,7 +3,7 @@ import { genericOAuth } from "better-auth/plugins";
 import { getServiceEndpoint } from "./service-discovery";
 
 export const auth = betterAuth({
-  secret: process.env.BETTER_AUTH_SECRET || "build-only-secret",
+  secret: process.env.BETTER_AUTH_SECRET || "build-only-secret-0123456789abcd",
   plugins: [
     genericOAuth({
       config: [
