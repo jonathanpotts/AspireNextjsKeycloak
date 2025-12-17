@@ -3,7 +3,7 @@ Example project using [Aspire](https://aspire.dev/) with a [Next.js](https://nex
 
 ## Requirements
 This project requires the following:
-* [.NET](https://dotnet.microsoft.com/) SDK 10.0 or later
+* [.NET](https://dotnet.microsoft.com/) SDK 10.0.100 or later
 * [Aspire CLI](https://aspire.dev/reference/cli/overview/)
 * [Node.js](https://nodejs.org/) 20.9.0 or later
 * [Docker Desktop](https://www.docker.com/) or [Podman](https://podman.io/)
