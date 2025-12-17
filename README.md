@@ -24,7 +24,7 @@ An [Aspire app host](https://aspire.dev/get-started/app-host/) which handles orc
 
 **Uses:**
 * **[Aspire.Hosting.Keycloak](https://aspire.dev/integrations/security/keycloak/)** - Handles starting up the Keycloak container and importing the realm data
-* **[Aspire.Hosting.JavaScript](https://aspire.dev/whats-new/aspire-13/#javascript-as-a-first-class-citizen)** - Handles launching and configuring the Node.js-based frontend project
+* **[Aspire.Hosting.JavaScript](https://aspire.dev/integrations/frameworks/javascript/)** - Handles launching and configuring the Node.js-based frontend project
 
 ### AspireNextjsKeycloak.ApiService
 An ASP.NET Core [minimal APIs](https://learn.microsoft.com/aspnet/core/fundamentals/apis?view=aspnetcore-10.0) backend which requires authorization from Keycloak.

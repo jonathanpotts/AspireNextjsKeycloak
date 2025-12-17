@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Aspire.Keycloak.Authentication" Version="13.0.2-preview.1.25603.5" />
+    <PackageReference Include="Aspire.Keycloak.Authentication" Version="13.1.0-preview.1.25616.3" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.1" />
   </ItemGroup>
   <ItemGroup>
