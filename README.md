@@ -4,13 +4,14 @@ Example project using [Aspire](https://aspire.dev/) with a [Next.js](https://nex
 ## Requirements
 This project requires the following:
 * [.NET](https://dotnet.microsoft.com/) SDK 10.0 or later
+* [Aspire CLI](https://aspire.dev/get-started/install-cli/)
 * [Node.js](https://nodejs.org/) 20.9.0 or later
 * [Docker Desktop](https://www.docker.com/) or [Podman](https://podman.io/)
 
 ## Running
 To run this project, do the following:
 1. Start Docker Desktop or Podman if it is not already running
-2. In the repo directory, run `dotnet tool restore` followed by `dotnet aspire run` and then open the dashboard using the URL output to the console
+2. In the repo directory, either run `aspire run` and then open the dashboard using the URL output to the console or run using a code editor or IDE such as [Visual Studio Code](https://code.visualstudio.com/)
 
 The default users are:
 | Username | Password |

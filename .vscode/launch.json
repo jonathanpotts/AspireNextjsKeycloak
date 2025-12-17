@@ -5,10 +5,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C#: AspireNextjsKeycloak.AppHost Debug",
-      "type": "dotnet",
+      "type": "aspire",
       "request": "launch",
-      "projectPath": "${workspaceFolder}/AspireNextjsKeycloak.AppHost/AspireNextjsKeycloak.AppHost.csproj"
+      "name": "Aspire: Launch AspireNextjsKeycloak.AppHost",
+      "program": "${workspaceFolder}/AspireNextjsKeycloak.AppHost/AspireNextjsKeycloak.AppHost.csproj"
     }
   ]
 }
