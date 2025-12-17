@@ -21,7 +21,7 @@ The default users are:
 
 ## Projects
 ### AspireNextjsKeycloak.AppHost
-An [Aspire app host](https://aspire.dev/get-started/app-host/) which handles orchestration and hosts the [Aspire dashboard](https://aspire.dev/dashboard/overview/).
+An [Aspire AppHost](https://aspire.dev/get-started/app-host/) which handles orchestration and hosts the [Aspire dashboard](https://aspire.dev/dashboard/overview/).
 
 **Uses:**
 * **[Aspire.Hosting.Keycloak](https://aspire.dev/integrations/security/keycloak/)** - Handles starting up the Keycloak container and importing the realm data
