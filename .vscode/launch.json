@@ -7,8 +7,8 @@
     {
       "type": "aspire",
       "request": "launch",
-      "name": "Aspire: Launch AspireNextjsKeycloak.AppHost",
-      "program": "${workspaceFolder}/AspireNextjsKeycloak.AppHost/AspireNextjsKeycloak.AppHost.csproj"
+      "name": "Aspire: Launch default apphost",
+      "program": "${workspaceFolder}"
     }
   ]
 }
