@@ -6,11 +6,12 @@ var keycloak = builder
     .WithRealmImport("./KeycloakRealms");
 
 var keycloakRealm = builder.AddParameter("keycloak-realm", "AspireNextjsKeycloak");
+var keycloakClientId = builder.AddParameter("keycloak-client-id", "apiservice");
 
 var apiService = builder
     .AddProject<Projects.AspireNextjsKeycloak_ApiService>("apiservice")
     .WithEnvironment("KEYCLOAK__REALM", keycloakRealm)
-    .WithEnvironment("KEYCLOAK__CLIENTID", "apiservice")
+    .WithEnvironment("KEYCLOAK__CLIENTID", keycloakClientId)
     .WithHttpHealthCheck("/health")
     .WithReference(keycloak)
     .WaitFor(keycloak);
@@ -48,10 +49,5 @@ var webFrontend = builder
     .WithReference(apiService)
     .WaitFor(apiService)
     .PublishAsDockerFile();
-
-if (builder.ExecutionContext.IsRunMode)
-{
-    webFrontend.WithEnvironment("NEXTAUTH_URL_INTERNAL", webFrontend.GetEndpoint("http"));
-}
 
 builder.Build().Run();
