@@ -1,5 +1,5 @@
 {
-  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "js/ts.preferences.preferTypeOnlyAutoImports": true,
   "[csharp]": {
     "editor.defaultFormatter": "csharpier.csharpier-vscode"
   },
