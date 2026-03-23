@@ -51,7 +51,7 @@ A Next.js frontend using the [App Router](https://nextjs.org/docs/app) and [Reac
 
 **Uses:**
 
-- **[OpenTelemetry](https://nextjs.org/docs/app/guides/open-telemetry)** - Adds observability to the Next.js server (modified to support gRPC endpoints when using the Node.js runtime)
+- **[OpenTelemetry](https://nextjs.org/docs/app/guides/open-telemetry)** - Adds observability to the Next.js server
 - **[Better Auth](https://www.better-auth.com/)** - Handles the auth flows
 - **[Material UI](https://mui.com/material-ui/) (a.k.a. MUI)** - Provides [Material Design 2](https://m2.material.io/)-based components for React
 
