@@ -1,4 +1,4 @@
-# AspireNextjsKeycloak
+# aspire-next-keycloak
 
 Example project using [Aspire](https://aspire.dev/) with a [Next.js](https://nextjs.org/) ([React](https://react.dev/)) frontend, an [ASP.NET Core](https://dotnet.microsoft.com/apps/aspnet/apis) backend, and [Keycloak](https://www.keycloak.org/) for authentication.
 
