@@ -9,28 +9,28 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@emotion/cache": "^11",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11",
-    "@mui/material": "^7",
-    "@mui/material-nextjs": "^7",
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.11",
+    "@mui/material-nextjs": "^7.3.10",
     "@opentelemetry/exporter-trace-otlp-grpc": "^0.205.0",
-    "@opentelemetry/sdk-trace-base": "^2.1.0",
-    "@vercel/otel": "^2",
-    "better-auth": "^1",
+    "@opentelemetry/sdk-trace-base": "^2.7.1",
+    "@vercel/otel": "^2.1.2",
+    "better-auth": "^1.6.11",
     "next": "~16.2",
     "react": "~19.2",
     "react-dom": "~19.2"
   },
   "devDependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "^4",
-    "@types/node": "^20",
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+    "@types/node": "^20.19.41",
     "@types/react": "~19.2",
     "@types/react-dom": "~19.2",
-    "eslint": "^9",
+    "eslint": "^9.39.4",
     "eslint-config-next": "~16.2",
-    "eslint-config-prettier": "^10",
-    "prettier": "^3",
-    "typescript": "^5"
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.3",
+    "typescript": "^5.9.3"
   }
 }
