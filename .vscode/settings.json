@@ -1,4 +1,5 @@
 {
+  "aspire.dashboardBrowser": "openExternalBrowser",
   "js/ts.preferences.preferTypeOnlyAutoImports": true,
   "[csharp]": {
     "editor.defaultFormatter": "csharpier.csharpier-vscode"
